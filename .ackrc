@@ -1,0 +1,3 @@
+--ignore-dir=.pytest_cache
+--ignore-dir=__pycache__
+--context=1

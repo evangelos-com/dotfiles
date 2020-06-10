@@ -50,6 +50,7 @@ brew install woff2
 
 # Install other useful binaries.
 brew install ack
+brew install diff-so-fancy
 brew install git
 brew install git-lfs
 brew install rename

@@ -57,6 +57,7 @@ brew install rename
 
 # Install graphical applications through the Cask project.
 brew cask install postman
+brew cask install docker
 
 # Remove outdated versions from the cellar.
 brew cleanup

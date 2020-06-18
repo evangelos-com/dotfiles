@@ -57,11 +57,15 @@ brew install rename
 
 # Install graphical applications through the Cask project.
 brew cask install postman
+
 # Note that after brew installs Docker, the docker command
 # (symbolic link) is not available at /usr/local/bin. Running
 # the Docker app for the first time creates this symbolic link.
 # ls -l /usr/local/bin/docker*
 brew cask install docker
+
+# Note will need to get a license for pycharm
+brew cask install pycharm
 
 # Remove outdated versions from the cellar.
 brew cleanup

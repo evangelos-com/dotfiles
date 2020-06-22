@@ -67,5 +67,7 @@ brew cask install docker
 # Note will need to get a license for pycharm
 brew cask install pycharm
 
+brew cask install itsycal
+
 # Remove outdated versions from the cellar.
 brew cleanup

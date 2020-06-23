@@ -32,7 +32,7 @@ if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
   chsh -s "${BREW_PREFIX}/bin/bash";
 fi;
 
-# Install `wget` with IRI support.
+# Install `wget`.
 brew install wget
 
 # Install more recent versions of some macOS tools.
@@ -55,8 +55,12 @@ brew install git
 brew install git-lfs
 brew install rename
 
+brew install nvm
+
+
 # Install graphical applications through the Cask project.
 brew cask install postman
+brew cask install itsycal
 
 # Note that after brew installs Docker, the docker command
 # (symbolic link) is not available at /usr/local/bin. Running
@@ -67,7 +71,6 @@ brew cask install docker
 # Note will need to get a license for pycharm
 brew cask install pycharm
 
-brew cask install itsycal
 
 # Remove outdated versions from the cellar.
 brew cleanup

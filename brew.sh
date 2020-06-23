@@ -55,19 +55,15 @@ brew install git
 brew install git-lfs
 brew install rename
 
-brew install nvm
-
 
 # Install graphical applications through the Cask project.
 brew cask install postman
 brew cask install itsycal
-
 # Note that after brew installs Docker, the docker command
 # (symbolic link) is not available at /usr/local/bin. Running
 # the Docker app for the first time creates this symbolic link.
 # ls -l /usr/local/bin/docker*
 brew cask install docker
-
 # Note will need to get a license for pycharm
 brew cask install pycharm
 

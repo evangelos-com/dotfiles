@@ -6,7 +6,7 @@ git pull origin master;
 
 function doInstalls() {
   # Install particular version of nvm
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh;
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash;
   nvm install v10.16.3;
   # Install particular version of npm
   npm i npm@6.11.3 -g;

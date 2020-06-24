@@ -5,8 +5,12 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doInstalls() {
-  # Install particular version of nvm
+  # Get nvm
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash;
+}
+
+function doContinueInstalls() {
+  # Install particular version of nvm, after .exports are sourced
   nvm install v10.16.3;
   # Install particular version of npm
   npm i npm@6.11.3 -g;
@@ -21,6 +25,7 @@ function doIt() {
 		--exclude "README.md" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
+  doContinueInstalls();
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

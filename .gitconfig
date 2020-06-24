@@ -11,6 +11,9 @@
   # Show the user email for the current repository.
   whoami = config user.email
 
+[pull]
+	ff = only
+
 [color "status"]
   added = green
   changed = red bold

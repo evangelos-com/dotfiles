@@ -25,7 +25,7 @@ function doIt() {
 		--exclude "README.md" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
-  doContinueInstalls();
+  doContinueInstalls;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

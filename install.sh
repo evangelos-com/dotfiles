@@ -4,13 +4,21 @@ cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;
 
+function doInstalls() {
+  # Install particular version of nvm
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh;
+  nvm install v10.16.3;
+  # Install particular version of npm
+  npm i npm@6.11.3 -g;
+}
+
 function doIt() {
+  doInstalls;
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
-		--exclude "bootstrap.sh" \
+		--exclude "install.sh" \
 		--exclude "README.md" \
-		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
 }

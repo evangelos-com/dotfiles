@@ -59,6 +59,7 @@ brew install rename
 # Install graphical applications through the Cask project.
 brew cask install postman
 brew cask install itsycal
+brew cask install viscosity
 # Note that after brew installs Docker, the docker command
 # (symbolic link) is not available at /usr/local/bin. Running
 # the Docker app for the first time creates this symbolic link.

@@ -2,12 +2,16 @@
   # List aliases.
 	aliases = config --get-regexp alias
 
-  # View the current working tree status using the short format.
-	s = status -s
- 
   # List contributors with number of commits.
 	contributors = shortlog --summary --numbered
 
+	# Remove branches that have already been merged with main.
+	# a.k.a. ‘delete merged’
+	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+  # View the current working tree status using the short format.
+	s = status -s
+ 
   # Show the user email for the current repository.
   whoami = config user.email
 
@@ -21,6 +25,11 @@
 
 [color "branch"]
   remote = yellow
+
+[branch]
+
+	# Show most recently changed branches first.
+	sort = -committerdate
 
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX

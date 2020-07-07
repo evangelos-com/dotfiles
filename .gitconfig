@@ -1,22 +1,22 @@
 [alias]
   # List aliases.
-	aliases = config --get-regexp alias
+  aliases = config --get-regexp alias
 
   # List contributors with number of commits.
-	contributors = shortlog --summary --numbered
+  contributors = shortlog --summary --numbered
 
 	# Remove branches that have already been merged with main.
 	# a.k.a. ‘delete merged’
-	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+  dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
   # View the current working tree status using the short format.
-	s = status -s
+  s = status -s
  
   # Show the user email for the current repository.
   whoami = config user.email
 
 [pull]
-	ff = only
+  ff = only
 
 [color "status"]
   added = green
@@ -28,22 +28,22 @@
 
 [branch]
 
-	# Show most recently changed branches first.
-	sort = -committerdate
+  # Show most recently changed branches first.
+  sort = -committerdate
 
 [core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [color]
 	ui = true
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 [color "diff"]
-	meta = 11
-	frag = magenta bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+  meta = 11
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse

@@ -1,4 +1,5 @@
 --ignore-dir=.pytest_cache
 --ignore-dir=__pycache__
 --ignore-dir=builds
+--ignore-dir=coverage
 --context=1

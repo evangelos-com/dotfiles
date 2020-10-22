@@ -54,6 +54,7 @@ brew install diff-so-fancy
 brew install git
 brew install git-lfs
 brew install rename
+brew instlal mysql
 
 
 # Install graphical applications through the Cask project.

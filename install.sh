@@ -15,7 +15,7 @@ function doContinueInstalls() {
   # nvm install v10.16.3;
   # Install particular version of npm
   # npm i npm@6.11.3 -g;
-  npm i -g npm@latest;
+  npm install npm@latest -g;
 }
 
 function doIt() {

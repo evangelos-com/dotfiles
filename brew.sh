@@ -65,7 +65,7 @@ brew install --cask sequel-pro
 brew install --cask visual-studio-code
 brew install --cask firefox
 
-
+brew install --cask iterm2
 
 # Note that after brew installs Docker, the docker command
 # (symbolic link) is not available at /usr/local/bin. Running

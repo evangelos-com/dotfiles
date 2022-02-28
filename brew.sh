@@ -68,8 +68,6 @@ brew cask install firefox
 # the Docker app for the first time creates this symbolic link.
 # ls -l /usr/local/bin/docker*
 brew cask install docker
-# Note will need to get a license for pycharm
-brew cask install pycharm
 
 
 # Remove outdated versions from the cellar.

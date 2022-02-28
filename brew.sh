@@ -58,11 +58,15 @@ brew install mysql
 
 
 # Install graphical applications through the Cask project.
-brew cask install postman
-brew cask install itsycal
-brew cask install viscosity
-brew cask install sequel-pro
-brew cask install firefox
+brew install --cask postman
+brew install --cask itsycal
+brew install --cask viscosity
+brew install --cask sequel-pro
+brew install --cask visual-studio-code
+brew install --cask firefox
+
+
+
 # Note that after brew installs Docker, the docker command
 # (symbolic link) is not available at /usr/local/bin. Running
 # the Docker app for the first time creates this symbolic link.

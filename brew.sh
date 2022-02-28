@@ -71,7 +71,7 @@ brew install --cask firefox
 # (symbolic link) is not available at /usr/local/bin. Running
 # the Docker app for the first time creates this symbolic link.
 # ls -l /usr/local/bin/docker*
-brew cask install docker
+brew install --cask docker
 
 
 # Remove outdated versions from the cellar.

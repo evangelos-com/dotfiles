@@ -64,14 +64,13 @@ brew install --cask viscosity
 brew install --cask sequel-pro
 brew install --cask visual-studio-code
 brew install --cask firefox
-
-brew install --cask iterm2
-
 # Note that after brew installs Docker, the docker command
 # (symbolic link) is not available at /usr/local/bin. Running
 # the Docker app for the first time creates this symbolic link.
 # ls -l /usr/local/bin/docker*
 brew install --cask docker
+brew install --cask iterm2
+brew install --cask slack
 
 
 # Remove outdated versions from the cellar.

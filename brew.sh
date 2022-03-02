@@ -55,7 +55,7 @@ brew install git
 brew install git-lfs
 brew install rename
 brew install mysql
-brew install yarn
+brew install yarn --ignore-dependencies
 
 
 # Install graphical applications through the Cask project.

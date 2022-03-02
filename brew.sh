@@ -71,6 +71,7 @@ brew install --cask firefox
 brew install --cask docker
 brew install --cask iterm2
 brew install --cask slack
+brew install --cask rectangle
 
 
 # Remove outdated versions from the cellar.

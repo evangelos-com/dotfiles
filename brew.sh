@@ -75,5 +75,9 @@ brew install --cask slack
 brew install --cask rectangle
 
 
+# Ruby specific installs
+brew install gnupg
+
+
 # Remove outdated versions from the cellar.
 brew cleanup

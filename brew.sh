@@ -56,6 +56,7 @@ brew install git-lfs
 brew install rename
 brew install mysql
 brew install yarn --ignore-dependencies
+brew install postgresql
 
 
 # Install graphical applications through the Cask project.
@@ -86,6 +87,7 @@ source ~/.bash_profile
 rvm install 2.7.3
 rvm use 2.7.3
 gem install rails
+gem install bundler
 
 
 # Remove outdated versions from the cellar.

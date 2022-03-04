@@ -61,7 +61,6 @@ brew install postgresql
 
 # Install graphical applications through the Cask project.
 brew install --cask postman
-brew install --cask itsycal
 brew install --cask viscosity
 brew install --cask sequel-pro
 brew install --cask visual-studio-code

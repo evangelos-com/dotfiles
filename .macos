@@ -27,7 +27,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 sudo systemsetup -settimezone "America/Halifax" > /dev/null
 
 ###############################################################################
-# Dock, Dashboard, and hot corners                                            #
+# Dock, Dashboard, Mission Control, and hot corners                           #
 ###############################################################################
 
 # Remove the auto-hiding Dock delay
@@ -37,6 +37,9 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+
+# Keep the Spaces arrangement
+defaults write com.apple.dock mru-spaces -bool false
 
 ###############################################################################
 # Terminal2                                                                   #

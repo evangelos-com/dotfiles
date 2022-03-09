@@ -87,6 +87,9 @@ rvm install 2.7.3
 rvm use 2.7.3
 gem install rails
 gem install bundler
+# Install Heroku
+brew tap heroku/brew
+brew install heroku
 
 
 # Remove outdated versions from the cellar.

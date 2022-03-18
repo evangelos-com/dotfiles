@@ -73,6 +73,7 @@ brew install --cask docker
 brew install --cask iterm2
 brew install --cask slack
 brew install --cask rectangle
+brew install --cask 1password
 
 
 # Ruby specific installs

@@ -88,6 +88,8 @@ rvm install 2.7.3
 rvm use 2.7.3
 gem install rails
 gem install bundler
+# RubyMine
+brew install --cask rubymine
 # Install Heroku
 brew tap heroku/brew
 brew install heroku

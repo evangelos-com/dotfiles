@@ -93,7 +93,8 @@ brew install --cask rubymine
 # Install Heroku
 brew tap heroku/brew
 brew install heroku
-
+# Install Stripe CLI
+brew install stripe/stripe-cli/stripe
 
 # Remove outdated versions from the cellar.
 brew cleanup

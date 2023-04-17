@@ -33,6 +33,9 @@ sudo systemsetup -settimezone "America/Halifax" > /dev/null
 # Dock, Dashboard, Mission Control, and hot corners                           #
 ###############################################################################
 
+# Set the icon size of Dock items to 36 pixels
+defaults write com.apple.dock tilesize -int 128
+
 # Remove the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock

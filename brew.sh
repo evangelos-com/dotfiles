@@ -76,26 +76,6 @@ brew install --cask rectangle
 brew install --cask 1password
 
 
-# Ruby specific installs
-brew install gnupg
-# Install GPG keys
-gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-# Install rvm
-\curl -sSL https://get.rvm.io | bash -s stable
-source ~/.rvm/scripts/rvm
-# Install Ruby & Rails
-rvm install 2.7.3
-rvm use 2.7.3
-gem install rails
-gem install bundler
-# RubyMine
-brew install --cask rubymine
-
-
-# Install Heroku
-brew tap heroku/brew
-brew install heroku
-
 # Install Stripe CLI
 brew install stripe/stripe-cli/stripe
 

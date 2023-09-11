@@ -1,6 +1,8 @@
 # Evangelos' dotfiles
 
 ## Installation of dotfiles
+NOTE: these were written for a bash terminal, not zsh which comes default in newer versions of macOS (Ventura for example).  The biggest issue with be the `.bash_prompt` colours.
+
 Run the very simple install script to pull in the latest version and copy the files to ~/, your home directory.
 ```bash
 ./install.sh

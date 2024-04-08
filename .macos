@@ -24,7 +24,7 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Set the scroll direction
-defaults write -g com.apple.swipescrolldirection -bool FALSE
+defaults write -g com.apple.swipescrolldirection -bool false
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "America/Halifax" > /dev/null

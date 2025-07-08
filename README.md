@@ -1,12 +1,25 @@
 # Evangelos' dotfiles
 
 ## Installation of dotfiles
-NOTE: these were written for a bash terminal, not zsh which comes default in newer versions of macOS (Sonoma for example).  `.bash_prompt` colours do not work in zsh.  List available shells `cat /etc/shells`.  Change default shell to bash `chsh -s /bin/bash`
 
-Run the very simple install script to pull in the latest version and copy the files to ~/, your home directory.
+### Compatibility Note
+
+These configurations are designed for Bash and may not work as expected in zsh, which is the default shell on newer macOS versions (such as Sonoma). Specifically, `.bash_prompt` colors are not compatible with zsh.
+
+### Switching to Bash
+
+To use these dotfiles with Bash:
+
+* List available shells: `cat /etc/shells`
+* Change your default shell to Bash: `chsh -s /bin/bash`
+
+### Installation Steps
+
+Run the install script to pull in the latest version and copy the files to your home directory:
 ```bash
 ./install.sh
 ```
+
 Source .macos
 ```base
 source ~/.macos

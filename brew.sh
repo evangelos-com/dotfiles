@@ -75,6 +75,7 @@ brew install --cask docker
 brew install --cask iterm2
 brew install --cask slack
 brew install --cask discord
+brew install --cask libreoffice
 brew install --cask rectangle
 brew install --cask 1password
 brew install --cask linearmouse

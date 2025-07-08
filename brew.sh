@@ -62,7 +62,6 @@ brew install postgresql
 
 # Install graphical applications through the Cask project.
 brew install --cask postman
-brew install --cask viscosity
 brew install --cask visual-studio-code
 brew install --cask firefox
 brew install --cask brave-browser

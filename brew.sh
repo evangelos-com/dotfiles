@@ -71,7 +71,6 @@ brew install --cask google-chrome
 # the Docker app for the first time creates this symbolic link.
 # ls -l /usr/local/bin/docker*
 brew install --cask docker
-brew install --cask iterm2
 brew install --cask slack
 brew install --cask discord
 brew install --cask libreoffice

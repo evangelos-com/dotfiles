@@ -55,6 +55,7 @@ brew install git
 brew install git-lfs
 brew install rename
 brew install mysql
+brew install sequel-ace
 brew install yarn --ignore-dependencies
 brew install postgresql
 
@@ -62,7 +63,6 @@ brew install postgresql
 # Install graphical applications through the Cask project.
 brew install --cask postman
 brew install --cask viscosity
-brew install --cask sequel-pro
 brew install --cask visual-studio-code
 brew install --cask firefox
 brew install --cask brave-browser

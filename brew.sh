@@ -53,7 +53,7 @@ brew install openssl@3 libyaml gmp rust
 brew install mise
 # Activate Mise only if not already activated
 if ! grep -q "mise activate bash" ~/.bash_profile; then
-  echo 'mise activate bash' >> ~/.bash_profile
+  echo 'eval "$(mise activate bash)"' ~/.bash_profile
 fi
 mise use --global ruby@3.4.4
 gem update --system

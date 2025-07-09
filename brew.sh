@@ -48,6 +48,17 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
+# Install ruby, mise package manager, and rails.
+brew install openssl@3 libyaml gmp rust
+brew install mise
+# Activate Mise only if not already activated
+if ! grep -q "mise activate bash" ~/.bash_profile; then
+  echo 'mise activate bash' >> ~/.bash_profile
+fi
+mise use --global ruby@3.4.4
+gem update --system
+gem install rails -v 8.0.2
+
 # Install other useful binaries.
 brew install ack
 brew install diff-so-fancy
@@ -79,7 +90,7 @@ brew install --cask libreoffice
 brew install --cask rectangle
 brew install --cask 1password
 brew install --cask linearmouse
-
+brew install --cask knockknock
 
 # Install Stripe CLI
 brew install stripe/stripe-cli/stripe

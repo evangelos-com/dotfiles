@@ -69,6 +69,7 @@ brew install mysql
 brew install sequel-ace
 brew install yarn --ignore-dependencies
 brew install postgresql
+brew install foreman
 
 
 # Install graphical applications through the Cask project.

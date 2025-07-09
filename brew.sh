@@ -68,7 +68,7 @@ brew install rename
 brew install mysql
 brew install sequel-ace
 brew install yarn --ignore-dependencies
-brew install postgresql
+brew install postgresql@16
 brew install foreman
 
 

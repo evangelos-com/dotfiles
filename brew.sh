@@ -1,83 +1,95 @@
 #!/usr/bin/env bash
 
-# Install command-line tools using Homebrew.
+set -e
 
-# Make sure we’re using the latest Homebrew.
-brew update
+# Function to install Homebrew if not already installed
+install_homebrew() {
+  if ! command -v brew &> /dev/null; then
+    echo "Homebrew is not installed. Installing..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+}
 
-# Upgrade any already-installed formulae.
-brew upgrade
+# Function to install command-line tools
+install_cli_tools() {
+  # Install GNU core utilities
+  brew install coreutils
+  BREW_PREFIX=$(brew --prefix)
+  if [ ! -f "${BREW_PREFIX}/bin/sha256sum" ]; then
+    ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
+  fi
 
-# Save Homebrew’s installed location.
-BREW_PREFIX=$(brew --prefix)
+  brew install moreutils
+  brew install findutils
+  brew install gnu-sed
+  brew install bash
+  brew install bash-completion2
+  brew install wget
+  brew install vim
+  brew install grep
+  brew install openssh
+  brew install screen
+  brew install gmp
+  brew install ack
+  brew install diff-so-fancy
+  brew install git
+  brew install git-lfs
+  brew install rename
+  brew install mysql
 
-# Install GNU core utilities (those that come with macOS are outdated).
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-brew install coreutils
-ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
+  brew install stripe/stripe-cli/stripe
 
-# Install some other useful utilities like `sponge`.
-brew install moreutils
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-brew install findutils
-# Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed
-# Install a modern version of Bash.
-brew install bash
-brew install bash-completion2
+  # Switch to using brew-installed bash as default shell
+  if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
+    echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
+    chsh -s "${BREW_PREFIX}/bin/bash";
+  fi;
+}
 
-# Switch to using brew-installed bash as default shell
-if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
-  chsh -s "${BREW_PREFIX}/bin/bash";
-fi;
+# Function to install font tools
+install_font_tools() {
+  brew tap bramstein/webfonttools
+  brew install sfnt2woff
+  brew install sfnt2woff-zopfli
+  brew install woff2
+}
 
-# Install `wget`.
-brew install wget
+# Function to install graphical applications
+install_graphical_apps() {
+  apps=(
+    visual-studio-code
+    brave-browser
+    google-chrome
+    firefox
+    postman
+    sequel-ace
+    docker
+    discord
+    slack
+    libreoffice
+    rectangle
+    linearmouse
+    knockknock
+  )
 
-# Install more recent versions of some macOS tools.
-brew install vim 
-brew install grep
-brew install openssh
-brew install screen
-brew install gmp
+  for app in "${apps[@]}"; do
+    if brew list --cask "$app" &> /dev/null; then
+      brew upgrade --cask "$app"
+    else
+      brew install --cask "$app"
+    fi
+  done
+}
 
-# Install font tools.
-brew tap bramstein/webfonttools
-brew install sfnt2woff
-brew install sfnt2woff-zopfli
-brew install woff2
+# Main function
+main() {
+  brew update
+  brew upgrade
+  install_homebrew
+  install_cli_tools
+  install_font_tools
+  install_graphical_apps
+  brew cleanup
+}
 
-# Install other useful binaries.
-brew install ack
-brew install diff-so-fancy
-brew install git
-brew install git-lfs
-brew install rename
-brew install mysql
-brew install sequel-ace
-
-# Install graphical applications through the Cask project.
-brew install --cask postman
-brew install --cask visual-studio-code
-brew install --cask firefox
-brew install --cask brave-browser
-brew install --cask google-chrome
-# Note that after brew installs Docker, the docker command
-# (symbolic link) is not available at /usr/local/bin. Running
-# the Docker app for the first time creates this symbolic link.
-# ls -l /usr/local/bin/docker*
-brew install --cask docker
-brew install --cask slack
-brew install --cask discord
-brew install --cask libreoffice
-brew install --cask rectangle
-brew install --cask linearmouse
-brew install --cask knockknock
-
-# Install Stripe CLI
-brew install stripe/stripe-cli/stripe
-
-
-# Remove outdated versions from the cellar.
-brew cleanup
+main

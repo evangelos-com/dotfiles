@@ -35,7 +35,7 @@ prompt_git() {
 		s+='*';
 	else
 		# Check for uncommitted changes in the index.
-		if ! git diff --quiet --ignore-submodules --cached >/dev/null 2>&1; then
+		if ! git diff --quiet --ignore-submodules --cached >/dev/null; then
 			s+='+';
 		fi;
 		# Check for unstaged changes.
